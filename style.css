@@ -52,7 +52,7 @@ body.dark {
   border-radius: 50%;
 }
 
-.checkbox: checked + label.ball {
+.checkbox:checked + .label .ball {
   transform: translateX(20px);
 }
 
