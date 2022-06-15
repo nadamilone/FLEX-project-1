@@ -55,3 +55,5 @@ likeBtn.addEventListener("click", () => {
   let likes = document.querySelector("#likes");
   console.log("clicked!");
 });
+
+const toggle = document.querySelector("#toggle");
