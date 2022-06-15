@@ -46,8 +46,13 @@ likeBtn.addEventListener("click", () => {
   console.log("clicked!");
 });
 
-const toggleBtn = document.querySelector("#toggle-button");
-toggleBtn.addEventListener("click", () => {
-    let toggle = document.querySelector("#toggle");
-    console.log("let there be light");
-})
+// const toggleBtn = document.querySelector("#toggle-button");
+// toggleBtn.addEventListener("click", () => {
+//   let toggle = document.querySelector("#toggle");
+//   console.log("let there be light");
+// });
+
+const checkbox = document.getElementById("checkbox");
+checkbox.addEventListener("change", () => {
+  document.body.classList.toggle("dark");
+});
