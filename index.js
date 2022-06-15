@@ -37,3 +37,9 @@ function artListDetails(art) {
   const classify = document.querySelector("#classification_titles");
   classify.textContent = art.data.classification_titles;
 }
+
+const likeBtn = document.querySelector("#like-button");
+likeBtn.addEventListener("click", () => {
+  let likes = document.querySelector("#likes");
+  console.log("clicked!");
+});
