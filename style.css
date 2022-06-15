@@ -1,10 +1,67 @@
 body {
-  /* align-items: center; */
+  /* display: flex;
   flex-direction: column;
   border: solid 5px plum;
   position: absolute;
   height: 100%;
-  width: 100%;
+  width: 100%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  /* transition: background 0.2s linear; */
+}
+
+body.dark {
+  background-color: #031926;
+}
+
+* {
+  box-sizing: border-box;
+}
+.checkbox {
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  position: relative;
+  transform: scale(1.5);
+  opacity: 0;
+}
+
+.label {
+  width: 45px;
+  height: 24px;
+  background: darkolivegreen;
+  display: flex;
+  border-radius: 50px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  position: relative;
+  transform: scale(1.5);
+}
+
+.ball {
+  width: 20px;
+  height: 20px;
+  background-color: whitesmoke;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+}
+
+.checkbox: checked + label.ball {
+  transform: translateX(20px);
+}
+
+.dark-mode {
+  color: darkslategray;
+}
+
+.light-mode {
+  color: blanchedalmond;
 }
 
 #main-div {
@@ -12,8 +69,8 @@ body {
   display: flex;
   flex-direction: column;
   border: solid 5px salmon;
-  background-color: #031926;
-  color: #fff;
+  /* background-color: #031926; */
+  color: hotpink;
   position: absolute;
   height: 100%;
   width: 100%;
@@ -28,11 +85,11 @@ body {
   font-size: 17px;
 }
 
-#toggle-button {
+/* #toggle-button {
   height: 25px;
   width: 60px;
   font-family: "Courier New", Courier, monospace;
-}
+} */
 
 .navbar {
   font-family: "Courier New", Courier, monospace;
@@ -75,6 +132,7 @@ h1 {
 }
 
 #title {
+  color: cyan;
 }
 
 #button {
@@ -93,6 +151,7 @@ li {
   list-style-type: none;
 }
 
-.footer {
+/* .footer {
   border: solid 5px paleturquoise;
-}
+  padding: 100px;
+} */
