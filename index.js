@@ -2,6 +2,18 @@ fetch("https://api.artic.edu/api/v1/artworks/214960")
   .then((response) => response.json())
   .then((data) => artListDetails(data));
 
+function renderArtArray(arts) {
+  arts.forEach((art) => {
+    const artDetails = document.querySelector("#art-details");
+    const li = document.createElement("li");
+    li.textContent = art.title;
+    li.addEventListener("click", () => artListDetails(art));
+    artDetails.append(li);
+  });
+  debugger;
+  console.log("hi");
+}
+
 function artListDetails(art) {
   console.log(art.data.title);
 
