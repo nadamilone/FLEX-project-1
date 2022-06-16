@@ -14,7 +14,7 @@ body {
 }
 
 body.dark {
-  background-color: #031926;
+  background-color: #000706e9;
 }
 
 * {
@@ -32,7 +32,7 @@ body.dark {
 .label {
   width: 45px;
   height: 24px;
-  background: darkolivegreen;
+  background: rgb(35, 54, 70);
   display: flex;
   border-radius: 50px;
   align-items: center;
@@ -70,20 +70,20 @@ body.dark {
   flex-direction: column;
   border: solid 5px salmon;
   /* background-color: #031926; */
-  color: hotpink;
+  color: grey;
   position: absolute;
   height: 100%;
   width: 100%;
 }
 
-#main-div a.split {
+/* #main-div a.split {
   float: left;
   color: #f2f2f2;
   text-align: right;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
-}
+} */
 
 /* #toggle-button {
   height: 25px;
@@ -93,7 +93,7 @@ body.dark {
 
 .navbar {
   font-family: "Courier New", Courier, monospace;
-  height: 50px;
+  height: 100px;
   width: 100%;
   border: solid 5px yellowgreen;
 }
@@ -101,7 +101,7 @@ body.dark {
 .navbar a {
   float: left;
   padding: 10px;
-  color: white;
+  color: grey;
   text-decoration: none;
   font-size: 17px;
   text-align: center;
@@ -109,7 +109,7 @@ body.dark {
 }
 
 .navbar a:hover {
-  color: blueviolet;
+  color: darkslategray;
 }
 
 h1 {
@@ -125,14 +125,22 @@ h1 {
   align-items: flex-start;
   border: solid 5px fuchsia;
   overflow: scroll;
+
+
 }
 
 #image_id {
   border: solid 5px hotpink;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  position: relative;
+  margin-top: 40px;
+  height: auto;
 }
 
 #title {
-  color: cyan;
+  color: rgba(95, 105, 39, 0.838);
 }
 
 #button {
