@@ -10,23 +10,35 @@
   </head>
   <body>
     <div id="main-div">
+      <div>
+        <!-- <a id="toggle" class="split">Dark/Light</a> -->
+        <input type="checkbox" class="checkbox" id="checkbox">
+        <label for="checkbox" class="label">
+          <i class="dark-mode"></i>
+      <i class='light-mode'></i>
+      <div class='ball'>
+      </label>
+      </div>
+      </div>
         <div><h1>Art Institute of Chicago</h1></div>
         <div class="navbar">
             Search By:
             <div class="dropdown"></div>
             <div class="dropdown-content">
-                <a>Artist</a>
-                <a>Medium</a>
-                <a>Museum</a>
-                <a>Category</a>
-                <a>Subject</a>
+              <div id="filter-btn-container">
+                <button class="btn" onClick="filterSelection('artist')"><a>Artist</a></button>
+                <button class="btn" onClick="filterSelection('medium')"><a>Medium</a></button>
+                <button class="btn" onClick="filterSelection('museum')"><a>Museum</a></button>
+                <button class="btn" onClick="filterSelection('category')"><a>Category</a></button>
+                <button class="btn" onClick="filterSelection('artist')"><a>Subject</a></button>
+              </div>
             </div>
         </div>
         
         <div id="art-details">
-            Will Contain All Details
+            <!-- Will Contain All Details -->
             <div class="pictureContainer">
-                <img id="image_id" src="" />Image
+                <img id="image_id" src="https://www.artic.edu/iiif/2/b70e280d-c833-156c-11f0-5476ea9405e6/full/full/0/default.jpg" />
                 <div id="title">Title</div>
                 <div id="main_reference_number">Reference Number</div>
                 <div id="date_display">Date</div>
@@ -34,6 +46,7 @@
                 <div id="dimensions">Size</div>
                 <div id="artist_display">Artist Name and Info</div>
                 <div id="on_loan_display">Display</div>
+                
                 <div id="subject_titles">Subject</div>
                 <div id="category_titles">Category</div>
                 <div id="classification_titles">Classification</div>
@@ -43,14 +56,6 @@
                 </div>
             </div>
         </div>
-        <!-- <a id="toggle" class="split">Dark/Light</a> -->
-        <input type="checkbox" class="checkbox" id="checkbox">
-        <label for="checkbox" class="label">
-          <i class="dark-mode"></i>
-      <i class='light-mode'></i>
-      <div class='ball'>
-      </label>
-      </div>
       <div class="footer"></div>
     </div>
   </body>
