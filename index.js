@@ -1,11 +1,22 @@
-fetch("https://api.artic.edu/api/v1/artworks/214960")
+fetch("https://api.artic.edu/api/v1/artworks")
   .then((response) => response.json())
   .then((data) => artListDetails(data));
 
-// fetch("")
-//   .then((response) => response.json())
-  // .then((imgData) => console.log(imgData));
+fetch("./imagedb.json")
+  .then((res) => res.json())
+  .then((imgdata) => getImgSrc(imgdata));
 
+function getImgSrc(imgdata) {
+  const refNum = document.querySelector("#main_reference_number").innerHTML;
+  console.log(refNum);
+
+  for (let i = 0; i < imgdata.length; i++) {
+    if (refNum === imgdata[i].object_number) {
+      const img_src = imgdata[i].image_url;
+      document.getElementById("image_id").src = `${img_src}`;
+    }
+  }
+}
 
 // function renderArtArray(arts) {
 //   arts.forEach((art) => {
@@ -20,7 +31,6 @@ fetch("https://api.artic.edu/api/v1/artworks/214960")
 // }
 
 function artListDetails(art) {
-  //   console.log(art.data.title);
   const refNum = document.querySelector("#main_reference_number");
   refNum.textContent = art.data.main_reference_number;
   // const img = document.querySelector("#image_id");
